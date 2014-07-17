@@ -263,6 +263,11 @@ void loop()
 								if (timers[currentTimer]->hasEnded())
 								{
 									clockState=bzBUZZER;
+									//// Turn off digitblink
+									if (timers[1]->hasEnded()) digit1Blink = false;
+									if (timers[2]->hasEnded()) digit2Blink = false;
+									if (timers[3]->hasEnded()) digit3Blink = false;
+									if (timers[4]->hasEnded()) digit4Blink = false;
 									timers[currentTimer]->_wasstarted=false;
 									timers[currentTimer]->_hasended=false;
 									buzzer=0;
@@ -277,6 +282,11 @@ void loop()
 										digitalWrite(BUZZERPIN,LOW);
 										clockState=bzSHOWCLOCK;
 										currentTimer=0;  // switch back to displaying the clock.
+										//// Turn off digitblink
+										//if (timers[1]->hasEnded()) digit1Blink = !digit1Blink;
+										//if (timers[2]->hasEnded()) digit2Blink = !digit2Blink;
+										//if (timers[3]->hasEnded()) digit3Blink = !digit3Blink;
+										//if (timers[4]->hasEnded()) digit4Blink = !digit4Blink;
 									} // else if (buzzer < BUZZERLENGTH)
 
 							break; //case CSBUZZER:
@@ -315,7 +325,7 @@ void loop()
 void digitalClockDisplay()
 {
 
-	if (timers[currentTimer]->isOn())
+	if (timers[currentTimer]->isRunning())
 	if (timers[currentTimer]->getHours()>0)
 	{
 		digit4=getDigit(timers[currentTimer]->getHours(),2);
@@ -333,6 +343,7 @@ void digitalClockDisplay()
 	if (timeElapsed > BLINKDOTFOR)
 		{
 			if (timers[1]->isRunning()) digit1Blink = !digit1Blink;
+			boolean t=timers[2]->isRunning();
 			if (timers[2]->isRunning()) digit2Blink = !digit2Blink;
 			if (timers[3]->isRunning()) digit3Blink = !digit3Blink;
 			if (timers[4]->isRunning()) digit4Blink = !digit4Blink;
@@ -340,12 +351,12 @@ void digitalClockDisplay()
 		}
 	
 	//
-	matrix.writeDigitNum(0,digit4);//,digit4Blink);
-	matrix.writeDigitNum(1,digit3);//,digit3Blink);
+	matrix.writeDigitNum(0,digit4,digit4Blink);//,digit4Blink);
+	matrix.writeDigitNum(1,digit3,digit3Blink);//,digit3Blink);
 	
 	matrix.drawColon(true);
 	
-	matrix.writeDigitNum(3,digit2);//,digit2Blink);
+	matrix.writeDigitNum(3,digit2,digit2Blink);//,digit2Blink);
 	matrix.writeDigitNum(4,digit1,digit1Blink);
 	matrix.writeDisplay();
 	
@@ -482,8 +493,13 @@ void menuButtonDoubleClick()
 		   // if all digits are zero then it is a countUpTimer
 		    countDownTimer *temp = new countDownTimer();
 			temp->startTimer(digit2,digit1,digit3,digit4);
-			timers[x]=temp;
-			timers[x]->turnOnTimer();
+			timers[1]=temp;
+			timers[1]->turnOnTimer();
+			 countDownTimer *temp2 = new countDownTimer();
+			 temp2->startTimer(4,3,2,1);
+			 timers[2]=temp2;
+			 timers[2]->startTimer();
+			 boolean t=timers[2]->isRunning();
 		}
 		else
 		{
