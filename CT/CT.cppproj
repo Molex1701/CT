@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>{07b459b4-8d76-4638-bc6d-a459ba2d616b}</ProjectGuid>
+    <avrdevice>atmega328p</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>CT</AssemblyName>
+    <Name>CT</Name>
+    <RootNamespace>CT</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <CacheFlash>true</CacheFlash>
+    <UncachedRange />
+    <BootSegment>0</BootSegment>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.6.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
+            <Value>__AVR_ATmega328P__</Value>
+            <Value>_VMDEBUG=1</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino</Value>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Time</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Time\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Timer</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Timer\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Clock</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Clock\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countUpTimer</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countUpTimer\utility</Value>
+            <Value>C:\Program Files (x86)\Arduino\libraries</Value>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries</Value>
+            <Value>C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -include=arduino.h</avrgcc.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
+            <Value>__AVR_ATmega328P__</Value>
+            <Value>_VMDEBUG=1</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
+          </ListValues>
+        </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino</Value>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Time</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Time\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Timer</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Timer\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Clock</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Clock\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countUpTimer</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countUpTimer\utility</Value>
+            <Value>C:\Program Files (x86)\Arduino\libraries</Value>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries</Value>
+            <Value>C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>
+            </Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
+        <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.miscellaneous.OtherFlags>-include=arduino.h</avrgcccpp.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countDownTimer</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.LibrarySearchPaths>
+        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+      </AvrGccCpp>
+    </ToolchainSettings>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>uno</arduino.board.name>
+        <arduino.board.desc>Arduino Uno</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Uno
+vid.0=0x2341
+pid.0=0x0043
+vid.1=0x2341
+pid.1=0x0001
+upload.tool=avrdude
+upload.protocol=arduino
+upload.maximum_size=32256
+upload.maximum_data_size=2048
+upload.speed=115200
+bootloader.tool=avrdude
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xDE
+bootloader.extended_fuses=0x05
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x0F
+bootloader.file=optiboot/optiboot_atmega328.hex
+build.mcu=atmega328p
+build.f_cpu=16000000L
+build.board=AVR_UNO
+build.core=arduino
+build.variant=standard
+runtime.ide.path=C:\Program Files (x86)\Arduino
+build.system.path=C:\Program Files (x86)\Arduino\hardware\arduino\avr\system
+runtime.ide.version=150
+originalid=uno
+version=1.5.6
+compiler.c.cmd=avr-gcc
+compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
+compiler.c.elf.flags=-Os -Wl,--gc-sections
+compiler.c.elf.cmd=avr-gcc
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=avr-g++
+compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD
+compiler.ar.cmd=avr-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=avr-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O ihex -R .eeprom
+compiler.elf2hex.cmd=avr-objcopy
+compiler.ldflags=
+compiler.size.cmd=avr-size
+build.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mmcu={build.mcu} -o "{build.path}/{build.project_name}.elf" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm
+recipe.objcopy.eep.pattern="{compiler.path}{compiler.objcopy.cmd}" {compiler.objcopy.eep.flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.eep"
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
+recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
+tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
+tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.cmd.path.linux={runtime.ide.path}/hardware/tools/avrdude
+tools.avrdude.config.path.linux={runtime.ide.path}/hardware/tools/avrdude.conf
+tools.avrdude.upload.params.verbose=-v -v -v -v
+tools.avrdude.upload.params.quiet=-q -q
+tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.program.params.verbose=-v -v -v -v
+tools.avrdude.program.params.quiet=-q -q
+tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.erase.params.verbose=-v -v -v -v
+tools.avrdude.erase.params.quiet=-q -q
+tools.avrdude.erase.pattern="{cmd.path}" "-C{config.path}" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m
+tools.avrdude.bootloader.params.verbose=-v -v -v -v
+tools.avrdude.bootloader.params.quiet=-q -q
+tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
+build.usb_manufacturer=
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+vm.core.include=arduino.h
+vm.boardsource.path=C:\Program Files (x86)\Arduino\hardware\arduino\avr
+vm.platformname.name=avr
+build.arch=AVR
+ide.hint=Arduino 1.5 Ide
+ide.location.key=Arduino15x
+ide.location.ide.winreg=Arduino 1.5.x Application
+ide.location.sketchbook.winreg=Arduino 1.5.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.version=150
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.sketchfolder.platforms.exclude=avr;sam
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=150
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ide.appid=arduino15x
+location.sketchbook=C:\Users\Richard\Documents\Arduino
+compiler.path=C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\
+includes= -I"C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire"  -I"C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC"  -I"C:\Users\Richard\Documents\Arduino\libraries\OneButton"  -I"C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack"  -I"C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX"  -I"C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis"  -I"C:\Users\Richard\Documents\Arduino\libraries\Time"  -I"C:\Users\Richard\Documents\Arduino\libraries\Clock"  -I"C:\Users\Richard\Documents\Arduino\libraries\countDownTimer"  -I"C:\Users\Richard\Documents\Arduino\libraries\countUpTimer"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\utility"
+build.path=C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno
+build.project_name=CT
+build.variant.path=C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard
+archive_file=core.a
+object_file=C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\countUpTimer\countUpTimer.cpp.o
+source_file=C:\Users\Richard\Documents\Arduino\libraries\countUpTimer\countUpTimer.cpp
+build.architecture=avr
+vmresolved.compiler.path=C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\
+vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+object_files="C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\CT.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Wire\Wire.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Wire\utility\twi.c.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\DS1307RTC\DS1307RTC.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\OneButton\OneButton.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Adafruit_LEDBackpack\Adafruit_LEDBackpack.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Adafruit_GFX\glcdfont.c.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Adafruit_GFX\Adafruit_GFX.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Time\DateStrings.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Time\Time.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Clock\Clock.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\countDownTimer\countDownTimer.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\countUpTimer\countUpTimer.cpp.o" 
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega328p</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>arduino</arduino.upload.protocol>
+        <arduino.upload.speed>115200</arduino.upload.speed>
+        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino15x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
+        <VM.DebugVariablesWindow.ColumnVisibleVariableHitCount>1</VM.DebugVariablesWindow.ColumnVisibleVariableHitCount>
+        <VM.DebugVariablesWindow.ColumnVisibleFunctionName>1</VM.DebugVariablesWindow.ColumnVisibleFunctionName>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
+            <Value>__AVR_ATmega328P__</Value>
+            <Value>_VMDEBUG=1</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino</Value>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Time</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Time\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Timer</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Timer\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Clock</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Clock\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countUpTimer</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countUpTimer\utility</Value>
+            <Value>C:\Program Files (x86)\Arduino\libraries</Value>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries</Value>
+            <Value>C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -include=arduino.h</avrgcc.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
+            <Value>__AVR_ATmega328P__</Value>
+            <Value>_VMDEBUG=1</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
+          </ListValues>
+        </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino</Value>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Time</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Time\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Timer</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Timer\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Clock</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Clock\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countUpTimer</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countUpTimer\utility</Value>
+            <Value>C:\Program Files (x86)\Arduino\libraries</Value>
+            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries</Value>
+            <Value>C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\</Value>
+            <Value>c:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>
+            </Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
+        <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.miscellaneous.OtherFlags>-include=arduino.h</avrgcccpp.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\countDownTimer</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.LibrarySearchPaths>
+        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+      </AvrGccCpp>
+    </ToolchainSettings>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>uno</arduino.board.name>
+        <arduino.board.desc>Arduino Uno</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Uno
+vid.0=0x2341
+pid.0=0x0043
+vid.1=0x2341
+pid.1=0x0001
+upload.tool=avrdude
+upload.protocol=arduino
+upload.maximum_size=32256
+upload.maximum_data_size=2048
+upload.speed=115200
+bootloader.tool=avrdude
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xDE
+bootloader.extended_fuses=0x05
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x0F
+bootloader.file=optiboot/optiboot_atmega328.hex
+build.mcu=atmega328p
+build.f_cpu=16000000L
+build.board=AVR_UNO
+build.core=arduino
+build.variant=standard
+runtime.ide.path=C:\Program Files (x86)\Arduino
+build.system.path=C:\Program Files (x86)\Arduino\hardware\arduino\avr\system
+runtime.ide.version=150
+originalid=uno
+version=1.5.6
+compiler.c.cmd=avr-gcc
+compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
+compiler.c.elf.flags=-Os -Wl,--gc-sections
+compiler.c.elf.cmd=avr-gcc
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=avr-g++
+compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD
+compiler.ar.cmd=avr-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=avr-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O ihex -R .eeprom
+compiler.elf2hex.cmd=avr-objcopy
+compiler.ldflags=
+compiler.size.cmd=avr-size
+build.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mmcu={build.mcu} -o "{build.path}/{build.project_name}.elf" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm
+recipe.objcopy.eep.pattern="{compiler.path}{compiler.objcopy.cmd}" {compiler.objcopy.eep.flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.eep"
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
+recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
+tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
+tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.cmd.path.linux={runtime.ide.path}/hardware/tools/avrdude
+tools.avrdude.config.path.linux={runtime.ide.path}/hardware/tools/avrdude.conf
+tools.avrdude.upload.params.verbose=-v -v -v -v
+tools.avrdude.upload.params.quiet=-q -q
+tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.program.params.verbose=-v -v -v -v
+tools.avrdude.program.params.quiet=-q -q
+tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.erase.params.verbose=-v -v -v -v
+tools.avrdude.erase.params.quiet=-q -q
+tools.avrdude.erase.pattern="{cmd.path}" "-C{config.path}" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m
+tools.avrdude.bootloader.params.verbose=-v -v -v -v
+tools.avrdude.bootloader.params.quiet=-q -q
+tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
+build.usb_manufacturer=
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+vm.core.include=arduino.h
+vm.boardsource.path=C:\Program Files (x86)\Arduino\hardware\arduino\avr
+vm.platformname.name=avr
+build.arch=AVR
+ide.hint=Arduino 1.5 Ide
+ide.location.key=Arduino15x
+ide.location.ide.winreg=Arduino 1.5.x Application
+ide.location.sketchbook.winreg=Arduino 1.5.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.version=150
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.sketchfolder.platforms.exclude=avr;sam
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=150
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ide.appid=arduino15x
+location.sketchbook=C:\Users\Richard\Documents\Arduino
+compiler.path=C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\
+includes= -I"C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire"  -I"C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC"  -I"C:\Users\Richard\Documents\Arduino\libraries\OneButton"  -I"C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack"  -I"C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX"  -I"C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis"  -I"C:\Users\Richard\Documents\Arduino\libraries\Time"  -I"C:\Users\Richard\Documents\Arduino\libraries\Clock"  -I"C:\Users\Richard\Documents\Arduino\libraries\countDownTimer"  -I"C:\Users\Richard\Documents\Arduino\libraries\countUpTimer"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\Wire\utility"
+build.path=C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno
+build.project_name=CT
+build.variant.path=C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard
+archive_file=core.a
+object_file=C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\countUpTimer\countUpTimer.cpp.o
+source_file=C:\Users\Richard\Documents\Arduino\libraries\countUpTimer\countUpTimer.cpp
+build.architecture=avr
+vmresolved.compiler.path=C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\
+vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+object_files="C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\CT.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Wire\Wire.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Wire\utility\twi.c.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\DS1307RTC\DS1307RTC.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\OneButton\OneButton.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Adafruit_LEDBackpack\Adafruit_LEDBackpack.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Adafruit_GFX\glcdfont.c.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Adafruit_GFX\Adafruit_GFX.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Time\DateStrings.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Time\Time.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\Clock\Clock.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\countDownTimer\countDownTimer.cpp.o" "C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\countUpTimer\countUpTimer.cpp.o" 
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega328p</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>arduino</arduino.upload.protocol>
+        <arduino.upload.speed>115200</arduino.upload.speed>
+        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino15x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
+        <VM.DebugVariablesWindow.ColumnVisibleVariableHitCount>1</VM.DebugVariablesWindow.ColumnVisibleVariableHitCount>
+        <VM.DebugVariablesWindow.ColumnVisibleFunctionName>1</VM.DebugVariablesWindow.ColumnVisibleFunctionName>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="myLibraries" />
+    <Folder Include="myLibraries\Clock" />
+    <Folder Include="myLibraries\countUpTimer" />
+    <Folder Include="myLibraries\OneButton" />
+    <Folder Include="myLibraries\Timer" />
+    <Folder Include="Visual Micro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CT.ino">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Documents\Arduino\libraries\Clock\Clock.cpp">
+      <SubType>compile</SubType>
+      <Link>myLibraries\Clock\Clock.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Documents\Arduino\libraries\Clock\Clock.h">
+      <SubType>compile</SubType>
+      <Link>myLibraries\Clock\Clock.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Documents\Arduino\libraries\countUpTimer\countUpTimer.cpp">
+      <SubType>compile</SubType>
+      <Link>myLibraries\countUpTimer\countUpTimer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Documents\Arduino\libraries\countUpTimer\countUpTimer.h">
+      <SubType>compile</SubType>
+      <Link>myLibraries\countUpTimer\countUpTimer.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Documents\Arduino\libraries\OneButton\OneButton.cpp">
+      <SubType>compile</SubType>
+      <Link>myLibraries\OneButton\OneButton.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Documents\Arduino\libraries\OneButton\OneButton.h">
+      <SubType>compile</SubType>
+      <Link>myLibraries\OneButton\OneButton.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\Documents\Arduino\libraries\Timer\Timer.cpp">
+      <SubType>compile</SubType>
+      <Link>myLibraries\Timer\Timer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\..\Documents\Arduino\libraries\Timer\Timer.h">
+      <SubType>compile</SubType>
+      <Link>myLibraries\Timer\Timer.h</Link>
+    </Compile>
+    <Compile Include="countDownTimer.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="countDownTimer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Visual Micro\.CT.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
