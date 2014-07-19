@@ -64,8 +64,6 @@
           <ListValues>
             <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino</Value>
             <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard</Value>
-            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
-            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC</Value>
@@ -74,6 +72,8 @@
             <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Time</Value>
@@ -118,8 +118,6 @@
           <ListValues>
             <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino</Value>
             <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard</Value>
-            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
-            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC</Value>
@@ -128,6 +126,8 @@
             <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Time</Value>
@@ -322,8 +322,6 @@ object_files="C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\CT.cpp
           <ListValues>
             <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino</Value>
             <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard</Value>
-            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
-            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC</Value>
@@ -332,6 +330,8 @@ object_files="C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\CT.cpp
             <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Time</Value>
@@ -376,8 +376,6 @@ object_files="C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\CT.cpp
           <ListValues>
             <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino</Value>
             <Value>C:\Program Files (x86)\Arduino\hardware\arduino\avr\variants\standard</Value>
-            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
-            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Wire\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\DS1307RTC</Value>
@@ -386,6 +384,8 @@ object_files="C:\Users\Richard\AppData\Local\VMicro\Arduino\Builds\CT\uno\CT.cpp
             <Value>C:\Users\Richard\Documents\Arduino\libraries\OneButton\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_GFX\utility</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack</Value>
+            <Value>C:\Users\Richard\Documents\Arduino\libraries\Adafruit_LEDBackpack\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\elapsedMillis\utility</Value>
             <Value>C:\Users\Richard\Documents\Arduino\libraries\Time</Value>

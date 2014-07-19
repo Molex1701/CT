@@ -11,33 +11,26 @@ countDownTimer::countDownTimer()
 countDownTimer::~countDownTimer()
 {
 } //~countDownTimer
-void countDownTimer::startTimer(int two, int one,int three,int four)
+void countDownTimer::startTimer(int zero, int one,int three,int four)
 {
 	_ison=true;
-	//	_prevtime = 0;
 	_hours=0;
-	_minutes=(four*10)+three;
-	_seconds=(two*10)+one;
+	_minutes=(zero*10)+one;
+	_seconds=(three*10)+four;
 	_lessThan10Seconds=false;
 	_wasstarted=false;
 	if (_minutes==0 && _seconds<10)
-	{
 		_lessThan10Seconds=true;
-	}
-	//Serial.println("inStartTimer");
-	//Serial.print("Minutes ");
-	//Serial.println(_minutes);
-	//Serial.print("Seconds ");
-	//Serial.println(_seconds);
+
 	_hasended=false;
 }
-void countDownTimer::startTimer(int six, int five, int four,int three , int two, int one)
+void countDownTimer::startTimer(int six, int five, int four,int three , int one, int zero)
 {
 	_ison=true;
 	_running=false;
 	_hours=(six*10)+five;
-	_minutes=(four*10)+three;
-	_seconds=(two*10)+one;
+	_minutes=(three*10)+four;
+	_seconds=(zero*10)+one;
 	_hasended=false;
 	_lessThan10Seconds=false;
 }
@@ -51,7 +44,6 @@ void  countDownTimer::turnOnTimer()
 	_running=true;
 	_wasstarted=true;
 	_hasended=false;
-	//Serial.println("Turn on Timer");
 }
 boolean countDownTimer::isOn()
 {
@@ -61,10 +53,7 @@ boolean countDownTimer::isOn()
 uint8_t countDownTimer::getHours()
 {
 	uint8_t _value;
-	//Serial.println("countdowntimer::gethours");
-	//if (_hours==0)
-	//_value = _minutes;
-	//else
+
 	_value = _hours;
 	
 	return _value;
@@ -92,13 +81,6 @@ boolean countDownTimer::isRunning()
 
 elapsedMillis countDownTimer::update(elapsedMillis _count)
 {
-
-	//Serial.print("Minute ");
-	//Serial.println(_minutes);
-	//Serial.print("Seconds ");
-	//Serial.println(_seconds);
-	//Serial.print("Running ");
-	//Serial.println(_running);
 
 	if (_running && _seconds < 10 && _minutes==0 && _hours==0)
 	_lessThan10Seconds=true;

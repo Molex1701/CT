@@ -22,11 +22,11 @@ extern "C" void __cxa_pure_virtual() {;}
 //
 void digitalClockDisplay();
 void displayMenu();
-void menuButtonClick();
 void menubLongPress();
 void menuButtonDoubleClick();
 void upButtonClick();
 void downButtonClick();
+void menuButtonClick();
 void stopButtonClick();
 void stopButtonDoubleClick();
 int getDigit(int number,  int digit);
